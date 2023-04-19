@@ -2,7 +2,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from 'next/image'
 import styles from './CarouselCard.module.css'
-import { useState } from 'react';
 
 type MyCarouselProps = {
   items: {
@@ -15,16 +14,6 @@ type MyCarouselProps = {
 };
 
 const CarouselCard = ({ items }: MyCarouselProps) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handleBeforeChange = (previousSlide: number, nextSlide: number): void => {
-    setCurrentSlide(nextSlide);
-  };
-
-  const handleAfterChange = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -44,7 +33,7 @@ const CarouselCard = ({ items }: MyCarouselProps) => {
   }
 
   return (
-    <Carousel responsive={responsive} className={styles.carousel} beforeChange={handleBeforeChange} afterChange={handleAfterChange} additionalTransfrom={-currentSlide * 100}>
+    <Carousel responsive={responsive} className={styles.carousel} >
       {items.map((item) => (
         <div key={item.key} className={styles.itemdiv}>
           <Image src={item.src} alt={item.alt} width={item.width} height={item.height} />
