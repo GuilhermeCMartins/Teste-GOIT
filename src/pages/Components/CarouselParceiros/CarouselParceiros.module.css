@@ -1,0 +1,24 @@
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    margin-left: 80px;
+}
+
+.itemdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: -20px;
+
+    width: 170px;
+    height: 181px;
+
+
+    background-color: #0D0035;
+    box-shadow: 0 0 200px 10px rgba(7, 116, 156, 0.62);;
+    border-radius: 34px;
+         
+}

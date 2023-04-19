@@ -1,0 +1,67 @@
+.containernav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0D102D;
+    height: 6vh;
+    padding: 0 6rem 0 6rem;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+.containerlinks{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+    width: 20%;
+    color: white;
+}
+
+.styledlink{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: #31344C;
+    padding: 5px 12px 5px 12px;
+    border-radius: 20px;
+    color: #3C99FC;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.styledlink:hover{
+    background-color: #164092;
+    color: #00E4FF;
+}
+
+.styledbutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #31344C;
+  padding: 5px 12px 5px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.styledicons{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #31344C;
+  padding: 10px;
+  border-radius: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 10px;
+  text-decoration: none;
+}
