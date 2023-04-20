@@ -1,19 +1,20 @@
 import Image from 'next/image'
-import { Container, ContainerText, DivTitulo, StyledButtons } from './sectiontwo_styles';
+import styles from './Styles.module.css'
+import Link from 'next/link'
 
 function SectionTwo(){
     return <>
-        <Container>
+        <div className={styles.container}>
             <Image src="/images/ScoutBanner.png" width={650} height={550} alt='Banner2'></Image>
-            <ContainerText>
-                <DivTitulo>
+            <div className={styles.containertext}>
+                <div className={styles.divtitulo}>
                     <h2 className='title'>Scout</h2>
                     <h2>Combine</h2>
-                </DivTitulo>
+                </div>
                 <p>Acompanhe o desempenho do seu atleta favorito, com NFTs dinâmicos e adicione à sua Wallet os ativos digitais de cada temporada. Invista e colecione a história. Comece agora, é rápido e fácil.</p>
-                <StyledButtons href="#">Cadastre-se</StyledButtons>
-            </ContainerText>
-        </Container>
+                <Link href="#" className={styles.button}>Cadastre-se</Link>
+            </div>
+        </div>
     </>
 }
 

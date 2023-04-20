@@ -23,6 +23,7 @@
 
 .searchinput::placeholder{
     color: #00E4FF;
+    font-family: 'Inter';
 }
 
 .searchicon{

@@ -1,5 +1,5 @@
 import CarouselCard from "../CarouselCard/CarouselCard";
-import { Container ,CarouselWrapper } from "./sectionthree_styles"
+import styles from './Styles.module.css'
 
 function SectionThree(){
     const items = [
@@ -86,13 +86,15 @@ function SectionThree(){
 
     ];
 
+    const handleBeforeChange = (from: number, to: number) => {};
+
     return <>
-    <Container>
+    <div className={styles.container}>
       <h1>Lançamentos</h1>
-      <CarouselWrapper>
-        <CarouselCard items={items} />  
-      </CarouselWrapper>  
-    </Container>
+      <div className={styles.carouselwrapper}>
+        <CarouselCard images={items} beforeChange={handleBeforeChange}></CarouselCard>
+      </div>  
+    </div>
     </>
 }
 

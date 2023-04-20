@@ -1,4 +1,4 @@
-import style from './Login.module.css'
+import style from '../LoginForm/Login.module.css'
 
 function RegisterText(){
     return <>

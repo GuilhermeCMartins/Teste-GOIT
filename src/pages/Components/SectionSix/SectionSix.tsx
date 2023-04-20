@@ -1,11 +1,11 @@
 import CarouselModalidades from "../CarouselModalidades/CarouselModalidades";
-import { CarouselWrapper, Container } from "./sectionsix_style";
+import styles from './Style.module.css'
 
 function SectionSix(){
     const items = [
         {
           key: '1',
-          src: '/images/Modalidades/Basquete.png',
+          src: '/images/Modalidades/basquete.png',
           alt: 'Carousel Item 1',
           caption: 'Basquete',
           width: 104,
@@ -21,7 +21,7 @@ function SectionSix(){
           },
           {
             key: '3',
-            src: '/images/Modalidades/futsal.png',
+            src: '/images/Modalidades/Futsal.png',
             alt: 'Carousel Item 1',
             caption: 'Futsal',
             width: 104,
@@ -45,7 +45,7 @@ function SectionSix(){
           },
           {
             key: '6',
-            src: '/images/Modalidades/Vôlei.png',
+            src: '/images/Modalidades/volei.png',
             alt: 'Carousel Item 1',
             caption: 'Vôlei',
             width: 104,
@@ -53,7 +53,7 @@ function SectionSix(){
           },
           {
             key: '6',
-            src: '/images/Modalidades/Vôlei.png',
+            src: '/images/Modalidades/volei.png',
             alt: 'Carousel Item 1',
             caption: 'Vôlei',
             width: 104,
@@ -61,7 +61,7 @@ function SectionSix(){
           },
           {
             key: '6',
-            src: '/images/Modalidades/Vôlei.png',
+            src: '/images/Modalidades/volei.png',
             alt: 'Carousel Item 1',
             caption: 'Vôlei',
             width: 104,
@@ -70,12 +70,12 @@ function SectionSix(){
     ]
 
     return <>
-        <Container>
+        <div className={styles.container}>
             <h1>Modalidades</h1>
-            <CarouselWrapper>
+            <div className={styles.carouselwrapper}>
                 <CarouselModalidades items={items} />  
-            </CarouselWrapper>  
-        </Container>
+            </div>  
+        </div>
     </>
 }
 

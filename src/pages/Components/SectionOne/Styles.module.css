@@ -1,11 +1,4 @@
-import styled from "styled-components";
-import Image from 'next/image';
-import Link from 'next/link'
-
-export const StyledImage = styled(Image)`
-`
-
-export const Container = styled.div`
+.container{
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -15,15 +8,17 @@ export const Container = styled.div`
     height: 100%;
     width: 80%;
     margin: 20px auto;
+}
 
-    h1{
+.container h1{
         text-transform: uppercase;
         font: oblique;
         font-size: 56px;
         line-height: 56px;
         font-weight: 900;
-    }
-    h2{
+}
+
+.container h2{
         text-transform: uppercase;
         color: #00E4FF;
         font: oblique;
@@ -31,34 +26,36 @@ export const Container = styled.div`
         line-height: 45px;
         font-weight: 900;
         margin-bottom: 20px;
-    }
-    p{
+
+}
+
+.container p{
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-    }
-`
+        font-family: 'Inter';
+}
 
-export const ContainerImage = styled.div`
+.containerimage{
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
-`
+}
 
-export const ContainerText = styled.div`
+.containertext{
     margin-top: 50px;
     padding: 30px;
-`
+}
 
-export const ContainerButtons = styled.div`
+.containerbuttons{
     display: flex;
     flex-direction: row;
     gap: 12px;
     margin-top: 20px;
-`
+}
 
-export const StyledButtons = styled(Link)`
+.styledbuttons{
     background-color: #0D0035;
     color: #EEEEEE;
     text-transform: uppercase;
@@ -67,10 +64,12 @@ export const StyledButtons = styled(Link)`
     border: 1px solid #803EB4;
     border-radius: 16px;
     padding: 16px 30px 16px 30px;
+    font-family: 'Inter';
+}
+    
 
-    :hover{
+.styledbuttons:hover{
         background: linear-gradient(322.68deg, #803EB4 36.47%, #4F25CC 92.31%);
         font-weight: 700;
         font-size:16px;
     }
-`

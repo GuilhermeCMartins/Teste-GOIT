@@ -1,0 +1,66 @@
+.swipercontainer{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.revista{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  color: black;
+  height: 500px;
+  width: 400px;
+}
+
+.container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.revista h1{
+  font-family: 'Outfit';
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 44px;
+  border-bottom:1px solid #5C5C5C;
+
+  text-transform: uppercase;
+}
+
+.revista p{
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  
+}
+
+.revista button{
+  background: linear-gradient(322.68deg, #803EB4 36.47%, #4F25CC 92.31%);
+  border-radius: 16px;
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 10px;
+  border: none;
+
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}

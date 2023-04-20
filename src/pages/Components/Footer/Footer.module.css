@@ -27,6 +27,7 @@
     font-weight: 400;
     width: 420px;
     line-height: 24px;
+    font-family: 'Inter';
 }
 
 .info ul{
@@ -39,6 +40,7 @@
 
 .info a{
     color: #00E4FF;
+    font-family: 'Inter';
 }
 
 
@@ -65,6 +67,7 @@
 
 .termos a{
     color: #7D7F96;
+    font-family: 'Inter';
 }
 
 .columns{
@@ -84,4 +87,5 @@
 
 .columns a{
     color: #A1A2B3;
+    font-family: 'Inter';
 }

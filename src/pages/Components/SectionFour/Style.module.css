@@ -1,0 +1,60 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    margin-bottom: 150px;   
+}
+
+.container h1{
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 900px;
+    font-size: 58px;
+    margin-bottom: 50px;
+}
+
+.container h2{
+        color: #00E4FF;
+        font-size: 45px;
+        font-weight: 900;
+        text-transform: uppercase;
+}
+
+.container p{
+        font-family: 'Inter';
+}
+
+
+.styledimage{
+    margin-right: -100px;
+}
+
+.containercards{
+    display: flex;
+    gap: 75px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+    
+
+.containercards h2{
+    color: #00E4FF;
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.containertext{
+    width: 500px;
+}
+
+.containertext h2{
+        font-size: 42px;
+        font-weight: 900;
+        margin-bottom: 20px;
+}

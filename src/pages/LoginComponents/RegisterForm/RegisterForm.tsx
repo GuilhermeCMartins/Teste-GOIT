@@ -1,5 +1,5 @@
-import style from './Login.module.css'
-import CheckboxImage from './Checkbox/Checkbox'
+import style from './Register.module.css'
+import CheckboxImage from '../Checkbox/Checkbox'
 
 function RegisterForm(){
     return <>

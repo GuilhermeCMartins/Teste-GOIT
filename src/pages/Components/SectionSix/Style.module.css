@@ -1,12 +1,8 @@
-import styled from 'styled-components';
-
-export const CarouselWrapper = styled.div`
+.carouselwrapper{
    width: 80%;
    margin: 0 auto;
-`;
-
-
-export const Container = styled.div`
+}
+.container{
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -22,10 +18,11 @@ export const Container = styled.div`
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
+}
 
-   h1{
-      font-size: 58px;
-      font-weight:900;
-      text-transform: uppercase;
-   }
-`
+.container h1{
+   font-size: 58px;
+   font-weight:900;
+   text-transform: uppercase;
+}
+

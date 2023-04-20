@@ -22,8 +22,8 @@ function Navbar(){
             </div>
 
             <div className={styles.container}>
-                <Link href="/#" className={styles.styledlink}>Area Clientes</Link>
-                <Link href="/#" className={styles.styledlink}>Area de Parceiro</Link>
+                <Link href="/#" className={styles.styledlink}>Área Clientes</Link>
+                <Link href="/#" className={styles.styledlink}>Área de Parceiro</Link>
                 <Link href="/#" className={styles.styledbutton}>R$ Real</Link>
                 <Link href="/#" className={styles.styledbutton}><Image src="/images/brasil.png" width={20} height={20} alt="Brasil"></Image>Português</Link>
             </div>

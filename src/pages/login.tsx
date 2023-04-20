@@ -1,15 +1,15 @@
-import style from "./LoginComponents/Login.module.css";
+import style from "./LoginComponents/LoginForm/Login.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from 'react';
-import RegisterForm from "./LoginComponents/RegisterForm";
-import RegisterText from "./LoginComponents/RegisterText";
-import LoginForm from "./LoginComponents/LoginForm";
-import LoginText from "./LoginComponents/LoginText";
+import RegisterForm from "./LoginComponents/RegisterForm/RegisterForm";
+import RegisterText from "./LoginComponents/RegisterForm/RegisterText";
+import LoginForm from "./LoginComponents/LoginForm/LoginForm";
+import LoginText from "./LoginComponents/LoginForm/LoginText";
 
 
 export default function Login() {
-  const [isRegistering, setIsRegistering] = useState(false);
+  const [isRegistering, setIsRegistering] = useState(true);
 
   const handleToggleForm = () => {
     setIsRegistering(!isRegistering);

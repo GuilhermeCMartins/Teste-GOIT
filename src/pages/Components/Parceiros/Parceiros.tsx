@@ -1,5 +1,5 @@
 import CarouselParceiros from "../CarouselParceiros/CarouselParceiros"
-import { CarouselWrapper, Container } from "./style";
+import styles from './Style.module.css'
 
 
 function Parceiros(){
@@ -30,13 +30,13 @@ function Parceiros(){
           },          
     ]
     return <>
-        <Container>
+        <div className={styles.container}>
             <h1>Parceiros</h1>
             <p>Parceiros e Clientes da CHRONUS Plataform</p>
-            <CarouselWrapper>
+            <div className={styles.carouselwrapper}>
                 <CarouselParceiros items={items}></CarouselParceiros>
-            </CarouselWrapper>
-        </Container>
+            </div>
+        </div>
     </>
 }
 

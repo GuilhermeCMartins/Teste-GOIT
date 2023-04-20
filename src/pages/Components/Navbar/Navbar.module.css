@@ -19,6 +19,11 @@
     gap: 12px;
     width: 20%;
     color: white;
+    
+}
+
+.containerlinks a{
+    font-family: 'Inter';
 }
 
 .styledlink{
@@ -32,6 +37,7 @@
     font-size: 12px;
     text-align: center;
     text-decoration: none;
+    font-family: 'Inter';
 }
 
 .styledlink:hover{
@@ -51,10 +57,11 @@
   font-weight: 600;
   gap: 10px;
   text-decoration: none;
+  font-family: 'Inter';
 }
 
 .styledicons{
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #31344C;
