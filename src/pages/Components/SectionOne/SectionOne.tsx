@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function SectionOne(){
     return <>
-        <div className={styles.container}>                
+        <div className={styles.container}>          
             <div className={styles.containertext}>
                 <h1>Colecionáveis</h1>
                 <h2>Exclusivos</h2>
