@@ -19,9 +19,9 @@ function LoginForm(){
             </div>
             <ul>
                 
-                <li><Image src={'/images/Login/facebook.svg'} width={30} height={30} alt="Facebook"></Image></li>
-                <li><Image src={'/images/Login/google.svg'} width={30} height={30} alt="Instagram"></Image></li>
-                <li><Image src={'/images/Login/instagram.svg'} width={30} height={30} alt="Google"></Image></li>
+            <Link href="#"><li><Image src={'/images/Login/facebook.svg'} width={48} height={48} alt="Facebook"></Image></li></Link>
+            <Link href="#"><li><Image src={'/images/Login/google.svg'} width={48} height={48} alt="Instagram"></Image></li></Link>
+            <Link href="#"><li><Image src={'/images/Login/instagram.svg'} width={48} height={48} alt="Google"></Image></li></Link>
             </ul>
         </div>
     

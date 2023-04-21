@@ -2,6 +2,11 @@
    width: 80%;
    margin: 0 auto;
 }
+
+.carouselwrapper img{
+   width: fit-content;
+}
+
 .container{
    display: flex;
    flex-direction: column;
