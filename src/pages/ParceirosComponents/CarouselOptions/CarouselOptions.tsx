@@ -37,7 +37,7 @@ const CarouselOptions: React.FC<CarouselProps> = ({ cards }) => {
   return (
     <div className={styles.container}>
       <Swiper {...settings}>
-        {cards.map((card) => (
+        {cards?.map((card) => (
           <SwiperSlide key={card.title}>
             <Card {...card} />
           </SwiperSlide>
