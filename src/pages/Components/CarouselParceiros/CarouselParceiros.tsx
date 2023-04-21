@@ -43,7 +43,7 @@ const CarouselParceiros = ({ items }: MyCarouselProps) => {
     <Carousel responsive={responsive} className={styles.carousel} arrows={true} > 
       {items?.map((item) => (
         <div key={item.key} className={styles.itemdiv}>
-          <Image src={item.src} alt={item.alt} width={item.width} height={item.height} />
+            <Image src={item.src} alt={item.alt} width={item.width} height={item.height} />
         </div>
       ))}
     </Carousel>
