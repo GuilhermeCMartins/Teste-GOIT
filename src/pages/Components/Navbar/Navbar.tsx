@@ -16,14 +16,14 @@ function Navbar(){
             </div>
 
             <div className={styles.containerlinks}>
-                <Link href="/#">Home</Link>
+                <Link href="/">Home</Link>
                 <Link href="/#">MKT Place</Link>
                 <Link href="/#">Institucional</Link>
             </div>
 
             <div className={styles.container}>
-                <Link href="/#" className={styles.styledlink}>Área Clientes</Link>
-                <Link href="/#" className={styles.styledlink}>Área de Parceiro</Link>
+                <Link href="/parceiros" className={styles.styledlink}>Área de Parceiro</Link>
+                <Link href="/clientes" className={styles.styledlink}>Área do Clientes</Link>
                 <Link href="/#" className={styles.styledbutton}>R$ Real</Link>
                 <Link href="/#" className={styles.styledbutton}><Image src="/images/brasil.png" width={20} height={20} alt="Brasil"></Image>Português</Link>
             </div>

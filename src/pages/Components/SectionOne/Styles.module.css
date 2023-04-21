@@ -69,7 +69,7 @@
     
 
 .styledbuttons:hover{
-        background: linear-gradient(322.68deg, #803EB4 36.47%, #4F25CC 92.31%);
-        font-weight: 700;
-        font-size:16px;
-    }
+    background: linear-gradient(322.68deg, #803EB4 36.47%, #4F25CC 92.31%);
+    font-weight: 700;
+    font-size:16px;
+}

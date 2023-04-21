@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    border: 2px solid #B4F5FD;
+    border-radius: 8px;
+}
+
+.container button{
+    border: none;
+    padding: 8px 16px;
+    background: #0D0035;
+    color: #B4F5FD;
+}
+
+.container p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+}

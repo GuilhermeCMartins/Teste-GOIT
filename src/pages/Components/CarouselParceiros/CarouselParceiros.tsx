@@ -2,8 +2,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from 'next/image'
 import styles from './CarouselParceiros.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight,faChevronLeft  } from "@fortawesome/free-solid-svg-icons";
 
 
 type MyCarouselProps = {
