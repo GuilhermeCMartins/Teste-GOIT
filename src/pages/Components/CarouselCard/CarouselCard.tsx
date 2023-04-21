@@ -79,7 +79,7 @@ const CarouselCard: React.FC<CarouselProps> = ({ images, beforeChange }) => {
         renderButtonGroupOutside={true}
         arrows={true}
       >
-        {images.map((image, index) => renderImage(image, index))}
+        {images?.map((image, index) => renderImage(image, index))}
       </Carousel>
     </div>
   );
