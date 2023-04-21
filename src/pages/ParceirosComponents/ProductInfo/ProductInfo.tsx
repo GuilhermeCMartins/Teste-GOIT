@@ -50,7 +50,6 @@ function ProductInfo(){
                 
                 <div className={styles.quantidade}>
                     <p>Quantidade</p>
-                    <Counter initialValue={0}></Counter>
                 </div>
                
                 <button>Comprar</button>
