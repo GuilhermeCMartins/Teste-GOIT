@@ -18,7 +18,7 @@ export default function UserLogged(_user: User) {
   return (
     <>
       <div className={styles.container}>
-        <p className={styles.nome}>{user.name}</p>
+        <p className={styles.nome}>{user?.name}</p>
         <DropdownMenu></DropdownMenu>
       </div>
       
