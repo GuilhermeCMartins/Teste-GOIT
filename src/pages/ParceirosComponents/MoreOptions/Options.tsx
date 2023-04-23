@@ -17,7 +17,7 @@ function Options(){
         },
         {
             image: '/images/Cards/nft_um.svg',
-            title: 'Nando Grana',
+            title: 'Nando Grana 2',
             description: 'Hall of fame',
             modality: 'Futsal',
             quantity: 120,
@@ -29,7 +29,7 @@ function Options(){
         },
         {
             image: '/images/Cards/nft_um.svg',
-            title: 'Nando Grana',
+            title: 'Nando Gran 3',
             description: 'Hall of fame',
             modality: 'Futsal',
             quantity: 120,
@@ -41,7 +41,7 @@ function Options(){
         },
          {
             image: '/images/Cards/nft_um.svg',
-            title: 'Nando Grana',
+            title: 'Nando Grana 4',
             description: 'Hall of fame',
             modality: 'Futsal',
             quantity: 120,
@@ -53,7 +53,7 @@ function Options(){
         },
         {
             image: '/images/Cards/nft_um.svg',
-            title: 'Nando Grana',
+            title: 'Nando Grana 5',
             description: 'Hall of fame',
             modality: 'Futsal',
             quantity: 120,
@@ -65,7 +65,7 @@ function Options(){
         },
         {
             image: '/images/Cards/nft_um.svg',
-            title: 'Nando Grana',
+            title: 'Nando Grana 6',
             description: 'Hall of fame',
             modality: 'Futsal',
             quantity: 120,

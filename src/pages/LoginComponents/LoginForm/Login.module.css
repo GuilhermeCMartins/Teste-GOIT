@@ -148,7 +148,7 @@
     background: linear-gradient(322.68deg, #803EB4 36.47%, #4F25CC 92.31%);
     border-radius: 12px;
     border: none;
-    width: 100%;
+    width: 70%;
 
     font-style: normal;
     font-weight: 700;
@@ -210,4 +210,42 @@
     align-items: center;
     flex-direction: column;
     gap: 30px;
+}
+
+
+/* Input username */
+.inputcontainer{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+}
+
+
+.input{
+    border-radius: 0.375rem;
+    border: 1px solid #164092;
+    font-size: 13px;
+    background-color: #0D102D;
+    width: 80%;
+    font-weight: 400;
+    padding: 12px;
+}
+ 
+.input:focus{
+    border-color: #6366f1;
+    box-shadow: 0 0 0 1px #6366f1;
+    outline: none;
+} 
+
+.input::placeholder{
+    color: #f4f6f7;
+}
+
+.inputicon{
+    position: absolute;
+    left: 0.75rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    color: #ffffff;
 }

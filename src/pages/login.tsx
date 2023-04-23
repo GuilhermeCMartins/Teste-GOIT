@@ -1,12 +1,12 @@
 import style from "./LoginComponents/LoginForm/Login.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from 'react';
+import { useState } from "react";
 import RegisterForm from "./LoginComponents/RegisterForm/RegisterForm";
 import RegisterText from "./LoginComponents/RegisterForm/RegisterText";
 import LoginForm from "./LoginComponents/LoginForm/LoginForm";
 import LoginText from "./LoginComponents/LoginForm/LoginText";
-
+import { AuthProvider } from "@/hooks/AuthProvider";
 
 export default function Login() {
   const [isRegistering, setIsRegistering] = useState(true);
@@ -16,7 +16,6 @@ export default function Login() {
   };
 
   return (
-    <>
       <div className={style.container}>
         <div className={style.containerleft}>
           <Link href="/">
@@ -40,26 +39,38 @@ export default function Login() {
         </div>
         <div className={style.containerright}>
           <div className={style.main}>
-
-            {isRegistering ? <RegisterText></RegisterText> : <LoginText></LoginText>}
+            {isRegistering ? (
+              <RegisterText></RegisterText>
+            ) : (
+              <LoginText></LoginText>
+            )}
 
             <div className={style.containerbutton}>
-                <div className={isRegistering ? style.inactive : style.active}>
-                    <button onClick={handleToggleForm} className={isRegistering ? style.inactive : style.active} >Log-in</button>
-                </div>
-              <div className={isRegistering ? style.active : style.inactive} >
-                  <button onClick={handleToggleForm}  className={isRegistering ? style.active : style.inactive}>Registrar</button>
+              <div className={isRegistering ? style.inactive : style.active}>
+                <button
+                  onClick={handleToggleForm}
+                  className={isRegistering ? style.inactive : style.active}
+                >
+                  Log-in
+                </button>
               </div>
-              
+              <div className={isRegistering ? style.active : style.inactive}>
+                <button
+                  onClick={handleToggleForm}
+                  className={isRegistering ? style.active : style.inactive}
+                >
+                  Registrar
+                </button>
+              </div>
             </div>
 
-            {isRegistering ? <RegisterForm></RegisterForm> : <LoginForm></LoginForm>}
-
-
-
+            {isRegistering ? (
+              <RegisterForm></RegisterForm>
+            ) : (
+              <LoginForm></LoginForm>
+            )}
           </div>
         </div>
       </div>
-    </>
   );
 }

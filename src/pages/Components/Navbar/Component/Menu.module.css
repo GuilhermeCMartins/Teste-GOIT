@@ -1,0 +1,100 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links a {
+    margin: 0.5rem 0;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.toggleButton {
+  display: inline-block;
+  background-color: #0D102D;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 120%;
+  right: 0px;
+  z-index: 1;
+  display: none;
+  list-style: none;
+  background-color: #131740;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  width: 120px;
+}
+
+.menu li {
+  margin: 0.2rem 0;
+}
+
+.showMenu {
+  display: block;
+}
+
+
+.link{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'DM Sans';
+  line-height: 21px;
+  color: white;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'DM Sans';
+  line-height: 21px;
+  color: white;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}

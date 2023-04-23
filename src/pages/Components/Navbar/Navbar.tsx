@@ -4,10 +4,18 @@ import Searchbar from '../Searchbar/Searchbar'
 import { faUser, faWallet, faCartShopping  } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './Navbar.module.css'
+import { useAuth } from "@/hooks/AuthProvider";
+import UserLogged from "./Component/UserLogged";
 
 
 
 function Navbar(){
+    const { user, logout, isAuthenticated } = useAuth();
+
+    function handleLogout(){
+        logout();
+    }
+
     return <>
             <div className={styles.containernav}>
             <div className={styles.container}>
@@ -31,7 +39,8 @@ function Navbar(){
 
             <div className={styles.container}>
                 <Link href="#" className={styles.styledicons}><FontAwesomeIcon icon={faWallet} /></Link>
-                <Link href="/login" className={styles.styledicons}><FontAwesomeIcon icon={faUser} /></Link>
+                <Link href="/login" className={styles.styledicons}><FontAwesomeIcon icon={faUser} /></Link> 
+                {isAuthenticated ? <UserLogged name={user.name} ></UserLogged> : null }
                 <Link href="#" className={styles.styledicons}><FontAwesomeIcon icon={faCartShopping} /></Link>
             </div>
         </div>
