@@ -38,9 +38,8 @@ function Navbar(){
             
 
             <div className={styles.container}>
-                <Link href="#" className={styles.styledicons}><FontAwesomeIcon icon={faWallet} /></Link>
-                <Link href="/login" className={styles.styledicons}><FontAwesomeIcon icon={faUser} /></Link> 
-                {isAuthenticated ? <UserLogged name={user.name} ></UserLogged> : null }
+                <Link href="#" className={styles.styledicons}><FontAwesomeIcon icon={faWallet} /></Link> 
+                {isAuthenticated ? <UserLogged name={user.name} ></UserLogged> : <Link href="/login" className={styles.styledicons}><FontAwesomeIcon icon={faUser} /></Link>  }
                 <Link href="#" className={styles.styledicons}><FontAwesomeIcon icon={faCartShopping} /></Link>
             </div>
         </div>

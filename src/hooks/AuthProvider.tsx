@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 interface User{
   email: string;
-  role: string;
+  userType: string;
   token: string;
   name: string;
 }
@@ -34,7 +34,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const login = async (username: string, password: string) => {
     try {
-      const res = await fetch('http://authenticationwebapi-dev.eba-asx26e3f.us-east-1.elasticbeanstalk.com/auth/login', {
+      const res = await fetch('https://api.easysports.click/auth/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -47,11 +47,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
 
       const data = await res.json();
-      const { token, email, role, name } = data;
+      const { token, email, userType, name } = data;
 
       const user = {
         email: email,
-        role: role,
+        userType: userType,
         token: token,
         name: name
       }
@@ -61,7 +61,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       localStorage.setItem('token', token);
 
-      if(user.role == "Parceiros"){
+      if(user.userType == "Admin"){
         router.push('/parceiros')
       }else{
         router.push('/clientes')

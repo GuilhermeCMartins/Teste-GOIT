@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import style from "./Login.module.css";
-import { toast } from 'react-toastify';
 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import styles from "../../../styles/toast.module.css";
+import classNames from "classnames";
 
 import { useState } from "react";
 import { useAuth } from "@/hooks/AuthProvider";
-
 
 function LoginForm() {
   const [errorUser, setUserError] = useState(true);
@@ -15,19 +17,21 @@ function LoginForm() {
   const [password, setPassword] = useState("");
   const { login } = useAuth();
 
+  const containerClassName = classNames(styles["toast-container"]);
+  const errorClassName = classNames(styles["toast-error"]);
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if(!username){
-        setUserError(false);
-        toast.error('Preencha o campo usuário.');
-        return 
+    if (!username) {
+      setUserError(false);
+      toast.error("Preencha o campo usuário.", {className: errorClassName });
     }
 
-    if(!password){
-        setPasswordError(false);
-        toast.error('Preencha o campo password.');
-        return 
+    if (!password) {
+      setPasswordError(false);
+      toast.error("Preencha o campo password.", {className: errorClassName });
+      return;
     }
 
     await login(username, password);
@@ -35,6 +39,7 @@ function LoginForm() {
 
   return (
     <>
+      <ToastContainer className={containerClassName}></ToastContainer>
       <form className={style.inputcontainer} onSubmit={handleSubmit}>
         <div className={style.inputcontainer}>
           <input
@@ -47,14 +52,13 @@ function LoginForm() {
         </div>
 
         <div className={style.inputcontainer}>
-        <input
-          type="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-          placeholder="Password"
-          className={errorPassword ? style.input : style.inputerror}
-        />
-
+          <input
+            type="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            placeholder="Password"
+            className={errorPassword ? style.input : style.inputerror}
+          />
         </div>
         <button type="submit">Log in</button>
       </form>
