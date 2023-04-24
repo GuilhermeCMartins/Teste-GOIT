@@ -222,6 +222,16 @@
 }
 
 
+.inputerror{
+    border-radius: 0.375rem;
+    border: 1px solid red;
+    font-size: 13px;
+    background-color: #0D102D;
+    width: 80%;
+    font-weight: 400;
+    padding: 12px;
+}
+
 .input{
     border-radius: 0.375rem;
     border: 1px solid #164092;

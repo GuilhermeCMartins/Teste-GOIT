@@ -6,10 +6,11 @@ import RegisterForm from "./LoginComponents/RegisterForm/RegisterForm";
 import RegisterText from "./LoginComponents/RegisterForm/RegisterText";
 import LoginForm from "./LoginComponents/LoginForm/LoginForm";
 import LoginText from "./LoginComponents/LoginForm/LoginText";
-import { AuthProvider } from "@/hooks/AuthProvider";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
-  const [isRegistering, setIsRegistering] = useState(true);
+  const [isRegistering, setIsRegistering] = useState(false);
 
   const handleToggleForm = () => {
     setIsRegistering(!isRegistering);
@@ -38,6 +39,7 @@ export default function Login() {
           </div>
         </div>
         <div className={style.containerright}>
+        <ToastContainer />
           <div className={style.main}>
             {isRegistering ? (
               <RegisterText></RegisterText>

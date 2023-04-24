@@ -1,19 +1,35 @@
 import Link from "next/link";
 import Image from "next/image";
 import style from "./Login.module.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { toast } from 'react-toastify';
+
 
 import { useState } from "react";
 import { useAuth } from "@/hooks/AuthProvider";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+
 
 function LoginForm() {
+  const [errorUser, setUserError] = useState(true);
+  const [errorPassword, setPasswordError] = useState(true);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    if(!username){
+        setUserError(false);
+        toast.error('Preencha o campo usuário.');
+        return 
+    }
+
+    if(!password){
+        setPasswordError(false);
+        toast.error('Preencha o campo password.');
+        return 
+    }
+
     await login(username, password);
   }
 
@@ -26,7 +42,7 @@ function LoginForm() {
             value={username}
             onChange={(event) => setUsername(event.target.value)}
             placeholder="Username"
-            className={style.input}
+            className={errorUser ? style.input : style.inputerror}
           />
         </div>
 
@@ -36,7 +52,7 @@ function LoginForm() {
           value={password}
           onChange={(event) => setPassword(event.target.value)}
           placeholder="Password"
-          className={style.input}
+          className={errorPassword ? style.input : style.inputerror}
         />
 
         </div>
