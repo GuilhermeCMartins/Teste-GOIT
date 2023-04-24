@@ -9,10 +9,10 @@ import { useAuth } from "@/hooks/AuthProvider";
 
 export default function Parceiros(){   
     const router = useRouter();
-    const { isAuthenticated } = useAuth();
+    const { user } = useAuth();
 
 
-    if(!isAuthenticated){
+    if(!user){
         router.push("/");
     }
 
