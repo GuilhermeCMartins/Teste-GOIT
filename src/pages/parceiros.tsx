@@ -5,16 +5,9 @@ import SectionFive from "./Components/SectionFive/SectionFive";
 import Options from "./ParceirosComponents/MoreOptions/Options";
 
 import ProductInfo from "./ParceirosComponents/ProductInfo/ProductInfo";
-import { useAuth } from "@/hooks/AuthProvider";
+import withPrivateRoute from "@/hooks/PrivateRoute";
 
-export default function Parceiros(){   
-    const router = useRouter();
-    const { user } = useAuth();
-
-
-    if(!user){
-        router.push("/");
-    }
+function Parceiros(){   
 
     return <>
         <Navbar></Navbar>
@@ -24,3 +17,5 @@ export default function Parceiros(){
         <Footer></Footer>
     </>
 }
+
+export default withPrivateRoute(Parceiros);
