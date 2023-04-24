@@ -6,6 +6,7 @@ import Options from "./ParceirosComponents/MoreOptions/Options";
 
 import ProductInfo from "./ParceirosComponents/ProductInfo/ProductInfo";
 import withPrivateRoute from "@/hooks/PrivateRoute";
+import { ToastContainer } from "react-toastify";
 
 function Parceiros(){   
 

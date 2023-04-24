@@ -2,6 +2,11 @@ import { useRouter } from "next/router";
 
 import { createContext, useContext, useEffect, useState } from "react";
 
+import { toast } from "react-toastify";
+import classNames from "classnames";
+import styles from '../styles/toast.module.css'
+
+
 interface User{
   email: string;
   userType: string;
@@ -26,6 +31,7 @@ const AuthContext = createContext<AuthContextValue>({
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const errorClassName = classNames(styles["toast-error"]);
   const router = useRouter();
 
   useEffect(() => {
@@ -42,8 +48,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         body: JSON.stringify({ email: username, password: password })
       });
 
-      if (!res.ok) {
-        throw new Error('Failed to login');
+     
+
+      if (res.ok === false) {
+        toast.error("Usuário ou senha inválidos.", {className: errorClassName })
+        throw new Error('Failed to login')
       }
 
       const data = await res.json();
@@ -69,8 +78,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
 
     } catch (error) {
-      router.push("/");
-      console.error(error);
+      router.push("/login");
     }
   };
 
@@ -82,7 +90,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ user, isAuthenticated , login, logout }}>
       {children}
     </AuthContext.Provider>
   );
