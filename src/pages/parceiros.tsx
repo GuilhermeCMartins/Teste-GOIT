@@ -11,6 +11,11 @@ export default function Parceiros(){
     const router = useRouter();
     const { isAuthenticated } = useAuth();
 
+
+    if(!isAuthenticated){
+        router.push("/");
+    }
+
     return <>
         <Navbar></Navbar>
         <ProductInfo></ProductInfo>
