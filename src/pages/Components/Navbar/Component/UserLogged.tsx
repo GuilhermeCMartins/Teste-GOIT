@@ -21,7 +21,7 @@ export default function UserLogged(_user: User) {
   return (
     <>
       <div className={styles.container}>
-        <Link href="/" className={styles.styledicons}><FontAwesomeIcon icon={faUser} /></Link> 
+        <Link href="/dashboard" className={styles.styledicons}><FontAwesomeIcon icon={faUser} /></Link> 
         <p className={styles.nome}>{user?.name}</p>
         <DropdownMenu></DropdownMenu>
       </div>

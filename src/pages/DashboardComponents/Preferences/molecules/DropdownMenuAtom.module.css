@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+    flex-direction: column;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    background-color: inherit;
+    background-image: url('/images/Dashboard/seta.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+
+    appearance: none;
+
+    border: 1px solid #2D6DE9;
+    border-radius: 14px ;
+    padding: 8px 30px;
+
+    width: 100%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    color: #EEEEEE;
+}
+
+.input option{
+    background-color: rgba(84, 140, 251, 1);
+}
+
+.input option:checked{
+    background-color: rgba(84, 140, 251, 1);;
+}

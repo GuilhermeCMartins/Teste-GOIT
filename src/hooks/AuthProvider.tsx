@@ -12,6 +12,11 @@ interface User{
   userType: string;
   token: string;
   name: string;
+  phone: number;
+  address:{
+    country:string;
+  };
+  document: string;
 }
 
 interface AuthContextValue {
@@ -56,13 +61,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
 
       const data = await res.json();
-      const { token, email, userType, name } = data;
+      const { token, email, userType, name, phone, address, document } = data;
+
+
 
       const user = {
         email: email,
-        userType: userType,
+        userType:  userType,
         token: token,
-        name: name
+        name: name,
+        phone: phone,
+        address: address,
+        document: document,
       }
 
       setUser(user)

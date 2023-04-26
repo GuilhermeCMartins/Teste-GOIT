@@ -1,0 +1,75 @@
+.container{
+    width: 90%;
+    height: 20vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, rgba(84, 140, 251, 0.3), rgba(117, 151, 219, 0.3));
+    background-color: linear-gradient(80.65deg, rgb(84, 140, 251) 60%, rgba(117, 151, 219, 0.6) 100.74%);
+    background-blend-mode: overlay;
+    box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    margin-top: 70px;
+    padding: 20px;
+}
+
+.image{
+  width: 5%;
+  position: absolute;
+  transform: translateX(-50%);
+  top: -45%;
+  padding: 3%;
+  background-color: #164092;
+  border-radius: 50%;
+}
+
+.container p{
+    opacity: 1;
+}
+
+.usercontent{
+  display: flex;
+  height: 100%;
+  width: 100%;  
+  position: relative;
+
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.links{
+  display: flex;
+  gap: 12px;
+  justify-self: flex-end;
+  align-items: flex-end;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.id{
+  display: flex;
+  gap: 20px;
+}
+
+
+.username{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 150%;
+}
+
+.userid{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+
+  color: #00E4FF;
+}
