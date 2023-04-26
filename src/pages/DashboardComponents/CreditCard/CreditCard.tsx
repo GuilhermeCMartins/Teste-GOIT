@@ -5,7 +5,7 @@ function CreditCard(){
     return <>
     <div className={styles.container}>
         <div className={styles.ccard}>
-            <Image src='/images/dashboard/visacard.svg' width={300} height={160} alt='visacard'></Image>
+            <Image src='/images/Dashboard/visacard.svg' width={300} height={160} alt='visacard'></Image>
             <button>Adicionar Cartão</button>
             <button>Alterar forma de pagamento</button>
         </div>
