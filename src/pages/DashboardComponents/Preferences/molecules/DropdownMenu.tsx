@@ -29,7 +29,7 @@ const DropdownMenuAtom: React.FC<DropdownMenuAtomProps> = ({
         value={selectedOption}
         onChange={handleOptionSelected}
       >
-        {options.map((option) => (
+        {options?.map((option) => (
           <option key={option} value={option} className={styles.option}>
             {option}
           </option>
